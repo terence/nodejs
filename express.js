@@ -22,10 +22,11 @@ app.delete('/del_user', function (req, res) {
    res.send('Hello DELETE');
 })
 
-// This responds a GET request for the /list_user page.
-app.get('/list_user', function (req, res) {
-   console.log("Got a GET request for /list_user");
-   res.send('Page Listing');
+// This responds a GET request for the /users page.
+app.get('/users', function (req, res) {
+   console.log("Got a GET request for /users");
+   res.sendFile( __dirname + "/public" + "/winter.html" );
+//   res.send('Page Listing');
 })
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
